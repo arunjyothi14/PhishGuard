@@ -1,0 +1,867 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffd6e7;
+    color: #3b1730;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: #be185d;
+
+    color: white;
+
+    box-shadow: 0 5px 20px rgba(120, 20, 70, 0.25);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background: #ec4899;
+}
+
+
+/* =========================
+   PROFESSIONAL CYBERSECURITY HERO
+========================= */
+
+.hero {
+    min-height: 88vh;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 8%;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(255, 255, 255, 0.22) 0,
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(244, 114, 182, 0.45) 0,
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #500724 0%,
+            #831843 30%,
+            #be185d 65%,
+            #ec4899 100%
+        );
+}
+
+
+/* Cybersecurity decorative grid */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.07) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+/* Decorative glowing circles */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    right: -100px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 0 40px rgba(255, 255, 255, 0.15),
+        inset 0 0 40px rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+}
+
+
+/* Small cybersecurity label */
+
+.subtitle {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: #ffe4ef;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    font-size: clamp(52px, 8vw, 90px);
+
+    line-height: 0.98;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 28px;
+
+    text-shadow:
+        0 5px 20px rgba(80, 7, 36, 0.35);
+}
+
+
+/* Description */
+
+.hero-content > p:not(.subtitle) {
+    max-width: 650px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    font-weight: 600;
+
+    color: #fff1f7;
+
+    margin-bottom: 35px;
+}
+
+
+/* Button */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 30px;
+
+    background: white;
+
+    color: #9d174d;
+
+    border: 2px solid white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 10px 30px rgba(80, 7, 36, 0.25);
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    transform: translateY(-5px);
+
+    background: #fce7f3;
+
+    box-shadow:
+        0 15px 35px rgba(80, 7, 36, 0.35);
+}
+
+
+/* Security floating decorations */
+
+.hero-content::after {
+    content: "🔐";
+
+    position: absolute;
+
+    right: -350px;
+    top: 70px;
+
+    width: 170px;
+    height: 170px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 75px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 2px solid rgba(255, 255, 255, 0.30);
+
+    box-shadow:
+        0 0 50px rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(8px);
+
+    animation: securityFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes securityFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 80vh;
+
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-content > p:not(.subtitle) {
+        font-size: 16px;
+    }
+
+    .hero-content::after {
+        right: 10px;
+        top: 30px;
+
+        width: 80px;
+        height: 80px;
+
+        font-size: 35px;
+    }
+}
+
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 85px 8%;
+
+    background: #ffd6e7;
+}
+
+.light-section {
+    background: #ffc2dc;
+}
+
+
+/* MAIN HEADINGS */
+
+.section h2 {
+    text-align: center;
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    color: #9d174d;
+
+    margin-bottom: 15px;
+}
+
+.section-description {
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    color: #5b2948;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* ABOUT */
+
+.info-card {
+    max-width: 950px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+
+    gap: 25px;
+    align-items: center;
+
+    padding: 35px;
+
+    background: #fff5f9;
+
+    border-left: 8px solid #db2777;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(190, 24, 93, 0.15);
+}
+
+.icon {
+    font-size: 60px;
+}
+
+.info-card h3 {
+    color: #be185d;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+
+/* TYPES */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+    margin-top: 40px;
+}
+
+.card {
+    padding: 30px;
+
+    background: #fff5f9;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(190, 24, 93, 0.15);
+
+    border-top: 6px solid #db2777;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #9d174d;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+
+/* WARNING */
+
+.warning-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 40px;
+}
+
+.warning-card {
+    padding: 28px;
+
+    background: #fff5f9;
+
+    border-radius: 16px;
+
+    border: 2px solid #f9a8d4;
+
+    box-shadow: 0 7px 20px rgba(190, 24, 93, 0.12);
+}
+
+.warning-card span {
+    display: inline-flex;
+
+    width: 55px;
+    height: 55px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fbcfe8;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.warning-card h3 {
+    color: #be185d;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+
+/* SAFETY TIPS */
+
+.tips {
+    max-width: 900px;
+
+    margin: 40px auto 0;
+}
+
+.tip {
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 23px;
+
+    margin-bottom: 15px;
+
+    background: #fff5f9;
+
+    border-radius: 15px;
+
+    box-shadow: 0 6px 20px rgba(190, 24, 93, 0.12);
+}
+
+.tip strong {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #db2777;
+
+    color: white;
+
+    font-weight: 900;
+}
+
+.tip h3 {
+    color: #be185d;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+
+/* SCENARIO */
+
+.scenario {
+    max-width: 950px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+
+    gap: 25px;
+
+    padding: 35px;
+
+    background: #fff5f9;
+
+    border-left: 8px solid #ec4899;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(190, 24, 93, 0.12);
+}
+
+.scenario-icon {
+    font-size: 55px;
+}
+
+.scenario h3 {
+    color: #be185d;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+
+/* QUIZ */
+
+.quiz-section {
+    background: #f9a8d4;
+}
+
+.quiz-section h2 {
+    color: #831843;
+    font-size: 44px;
+    font-weight: 900;
+}
+
+.quiz-section .section-description {
+    color: #5b2948;
+}
+
+
+/* QUESTIONS */
+
+#quiz-form {
+    max-width: 900px;
+
+    margin: 40px auto 0;
+}
+
+.quiz-question {
+    background: #fff5f9;
+
+    color: #3b1730;
+
+    padding: 28px;
+
+    margin-bottom: 22px;
+
+    border-radius: 16px;
+
+    border-left: 7px solid #db2777;
+
+    box-shadow: 0 8px 25px rgba(190, 24, 93, 0.15);
+}
+
+.quiz-question h3 {
+    color: #9d174d;
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+
+    font-weight: 900;
+}
+
+.quiz-question label {
+    display: block;
+
+    padding: 13px 16px;
+
+    margin: 10px 0;
+
+    border: 1px solid #f9a8d4;
+
+    border-radius: 10px;
+
+    background: #fff0f6;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.quiz-question label:hover {
+    background: #fbcfe8;
+}
+
+.quiz-question input {
+    margin-right: 10px;
+
+    accent-color: #db2777;
+}
+
+
+/* SUBMIT */
+
+#submit-quiz {
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #be185d;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+#submit-quiz:hover {
+    background: #831843;
+}
+
+
+/* RESULT */
+
+#quiz-result {
+    max-width: 600px;
+
+    margin: 30px auto 0;
+
+    padding: 22px;
+
+    background: white;
+
+    color: #be185d;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    font-weight: 900;
+
+    display: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 45px 8%;
+
+    text-align: center;
+
+    background: #831843;
+
+    color: white;
+}
+
+footer h3 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #fbcfe8;
+    margin-top: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .warning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 75vh;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+
+    .cards,
+    .warning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card,
+    .scenario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .quiz-question {
+        padding: 22px;
+    }
+}
+/* FINAL HOME PAGE BACKGROUND */
+
+.hero {
+    min-height: 88vh !important;
+    position: relative !important;
+    overflow: hidden !important;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #fbcfe8 0%,
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #500724 0%,
+            #831843 35%,
+            #be185d 65%,
+            #f472b6 100%
+        ) !important;
+
+    color: white !important;
+}
+
+
+/* Cybersecurity grid */
+
+.hero::before {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.08) 1px,
+            transparent 1px
+        ) !important;
+
+    background-size: 40px 40px !important;
+
+    opacity: 0.4 !important;
+}
+
+
+/* Make Home content stay above decoration */
+
+.hero-content {
+    position: relative !important;
+    z-index: 5 !important;
+}
